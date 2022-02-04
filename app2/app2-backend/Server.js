@@ -6,8 +6,8 @@ const userRouters = require("./app/routes/user");
 const itemRouters = require("./app/routes/item");
 const uploadRouters = require("./app/routes/upload");
 const bodyParser = require("body-parser");
-
-
+const cors = require("cors");
+app.use(cors())
 app.use(
   bodyParser.json({
     limit: '20mb',

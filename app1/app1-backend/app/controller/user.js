@@ -31,13 +31,14 @@ exports.findSingle = (req, res) => {
 };
 
 exports.deleteSingle = (req, res) => {
-  const { id } = req.params;
+  const { email } = req.params;
+  
   model.deleteOne(
     {
-      id: parseId(id),
+      email: email,
     },
     (err, docs) => {
-      res.send( {message:'Delete success'} );
+      res.send( {docs: docs, message:'Delete success: ' + email} );
     }
   );
 };

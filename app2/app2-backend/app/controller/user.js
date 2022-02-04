@@ -17,34 +17,10 @@ exports.postData = (req, res) => {
     if (err) {
       res.send({ err: "Error:" + err }, 422);
     } else {
-      res.send({ docs });
+      res.send( docs );
     }
   });
 };
 
-exports.updateSingle = (req, res) => {
-  const { id } = req.params;
-  const body = req.body;
-  model.updateOne(
-    {
-      id: parseId(id),
-    },
-    body,
-    (err, docs) => {
-      res.send({ items: docs });
-    }
-  );
-};
 
-exports.deleteSingle = (req, res) => {
-  const { id } = req.params;
-  model.deleteOne(
-    {
-      id: parseId(id),
-    },
-    (err, docs) => {
-      res.send({ items: docs });
-    }
-  );
-};
 

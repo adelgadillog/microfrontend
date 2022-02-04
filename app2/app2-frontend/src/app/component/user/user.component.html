@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+      <label for="name"> Name </label>
+      <input id="name"  class="form-control" type="text" formControlName="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="address"> Email adrres: </label>
+      <input id="address" class="form-control" type="text" formControlName="email" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Create</button>
+  </form>
+</div>

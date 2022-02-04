@@ -9,15 +9,8 @@ router.post(
     controller.postData
 );
 
-router.put(
-    `/${path}/:id`,
-    controller.updateSingle
-);
 
-router.delete(
-    `/${path}/:id`,
-    controller.deleteSingle
-);
+
 
 
 module.exports = router;

@@ -16,7 +16,7 @@ router.get(
 );
 
 router.delete(
-    `/${path}/:id`,
+    `/${path}/:email`,
     controller.deleteSingle
 );
 

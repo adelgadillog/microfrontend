@@ -20,7 +20,7 @@ export class UserService {
     return this.http.get<User>(`${this.url}user/${_id}`)
   }
 
-  public deleteUser(_id:number):Observable<any>{
-    return this.http.delete<any>(`${this.url}user/${_id}`)
+  public deleteUser(email:string):Observable<any>{
+    return this.http.delete<any>(`${this.url}user/${email}`)
   }
 }

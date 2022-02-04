@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
     this.router.navigate([`/user/detail/${_id}`]);
   }
 
-  public delete(_id: number) {
+  public delete(_id: string) {
     this.userService.deleteUser(_id).subscribe((message) => {
       this.message = message;
       console.log(this.message);

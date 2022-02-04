@@ -8,14 +8,15 @@
         </thead>
         <tbody>
             <tr *ngFor="let user of users; let indice = index">
+               
                 <th scope="row">{{indice+1}}</th>
                 <td data-title="Name:"><img class="avatar" src="{{user.avatar}}" alt=""></td>
                 <td data-title="Lastname:">{{user.name}}</td>
                 <td data-title="Document type:">{{user.email}}</td>
                 
                 <td> <button class="btn btn-view bi bi-eye-fill" (click)="view(user._id)">View</button>
-                    |
-                    <button class="btn btn-delete bi bi-trash-fill" (click)="delete(user._id)">Delete</button>
+                    | 
+                    <button class="btn btn-delete bi bi-trash-fill" (click)="delete(user.email)">Delete</button>
                 <td>
             </tr>
         </tbody>
